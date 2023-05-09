@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Semaforo : MonoBehaviour
 {
-    public GameObject luz;
+    public GameObject luz,trigger;
 
     public Transform posVer, posRoj, posAma;
     private bool rojo, verde, amarilloRoja,amarilloVerda;
@@ -13,6 +13,7 @@ public class Semaforo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trigger.SetActive(false);
         verde = true;
     }
 
@@ -25,6 +26,7 @@ public class Semaforo : MonoBehaviour
             luz.GetComponent<Light>().color = Color.red;
             StartCoroutine(LuzRojo());
             amarilloVerda = false;
+            trigger.SetActive(true);
         }
 
         if (verde == true)
@@ -41,6 +43,7 @@ public class Semaforo : MonoBehaviour
             luz.GetComponent<Light>().color = Color.yellow;
             StartCoroutine(LuzAmarilloRojo());
             rojo = false;
+            trigger.SetActive(false);
         }
 
         if (amarilloVerda == true)
