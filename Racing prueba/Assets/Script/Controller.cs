@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class Controller : MonoBehaviour
 {
@@ -21,8 +23,13 @@ public class Controller : MonoBehaviour
     public int velocityMax = 2000;
 
 
-    public GameObject tercera_Persona;
-    public GameObject Primera_Persona;
+   
+    public Camera tercera_Persona;
+    public Camera Primera_Persona;
+
+
+
+
 
 
     private void Start()
@@ -35,8 +42,29 @@ public class Controller : MonoBehaviour
         velocityAct = (2 * Mathf.PI * Rueda1.radius) * Rueda1.rpm * 60 / 600;
         Llantas1.localEulerAngles = new Vector3(0, Rueda3.steerAngle, 0);
         Llantas2.localEulerAngles = new Vector3(0, Rueda4.steerAngle, 0);
+
+        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (Primera_Persona.enabled)
+            {
+                Primera_Persona.enabled = false;
+                tercera_Persona.enabled = true;
+            }
+            
+            else if (tercera_Persona.enabled)
+            {
+                Primera_Persona.enabled = true;
+                tercera_Persona.enabled = false;
+            }
+
+        }
+
+
+
     }
 
+    [Obsolete]
     private void FixedUpdate()
     {
         if(velocityAct < velocityMax)
@@ -73,17 +101,23 @@ public class Controller : MonoBehaviour
             Rueda2.brakeTorque = 0;
         }
 
-        if (Input.GetButton("Fire1"))
-        {
-            Primera_Persona.SetActive(true);
-            tercera_Persona.SetActive(false);      
-        }
 
-        if (Input.GetButton("Fire2"))
-        {
-            Primera_Persona.SetActive(false);
-            tercera_Persona.SetActive(true);
 
-        }
+       
+
+       
+
+
+
+
+
+
+
     }
+   
+ 
+    
+    
+        
+    
 }
