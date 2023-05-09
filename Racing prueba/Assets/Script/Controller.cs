@@ -13,8 +13,17 @@ public class Controller : MonoBehaviour
     public Transform Llantas2;
     public int Velocity = 150;
 
+    public Animator animator_llanta1;
+    public Animator animator_llanta2;
+    public Animator animator_llanta3;
+    public Animator animator_llanta4;
     public float velocityAct;
     public int velocityMax = 2000;
+
+
+    public GameObject tercera_Persona;
+    public GameObject Primera_Persona;
+
 
     private void Start()
     {
@@ -34,6 +43,10 @@ public class Controller : MonoBehaviour
         {
             Rueda1.motorTorque = Velocity * Input.GetAxis("Vertical");
             Rueda2.motorTorque = Velocity * Input.GetAxis("Vertical");
+            animator_llanta1.SetBool("Run", true);
+            animator_llanta2.SetBool("Run", true);
+            animator_llanta3.SetBool("Run", true);
+            animator_llanta4.SetBool("Run", true);
         }
 
         else
@@ -49,11 +62,28 @@ public class Controller : MonoBehaviour
         {
             Rueda1.brakeTorque = Frenar;
             Rueda2.brakeTorque = Frenar;
+            animator_llanta1.SetBool("Run", false);
+            animator_llanta2.SetBool("Run", false);
+            animator_llanta3.SetBool("Run", false);
+            animator_llanta4.SetBool("Run", false);
         }
         else
         {
             Rueda1.brakeTorque = 0;
             Rueda2.brakeTorque = 0;
+        }
+
+        if (Input.GetButton("Fire1"))
+        {
+            Primera_Persona.SetActive(true);
+            tercera_Persona.SetActive(false);      
+        }
+
+        if (Input.GetButton("Fire2"))
+        {
+            Primera_Persona.SetActive(false);
+            tercera_Persona.SetActive(true);
+
         }
     }
 }
