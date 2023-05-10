@@ -12,16 +12,29 @@ public class Pratullaje : MonoBehaviour
 
     int puntoActual = 0;
 
+    public bool entroZona = false;
+
+    private void Start()
+    {
+        entroZona = false;
+    }
+
     private void Update()
     {
-        if (semaforo.rojo == true || semaforo.amarilloRoja == true)
-        {
-            if (MoviendoAlTarget())
+        
+            if (semaforo.rojo == true)
             {
-                puntoActual = ObtenerSiguienteObjetivo();
+                if (MoviendoAlTarget())
+                {
+                    puntoActual = ObtenerSiguienteObjetivo();
+                }
             }
-
+        if (entroZona == true && !semaforo.rojo)
+        {
+            puntoActual = ObtenerSiguienteObjetivo();
         }
+      
+        
     }
     public bool MoviendoAlTarget() 
     {
@@ -48,5 +61,21 @@ public class Pratullaje : MonoBehaviour
         }
 
         return puntoActual;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("peaton"))
+        {
+           entroZona = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("peaton"))
+        {
+            entroZona = false;
+            Debug.Log("asfaf");
+        }
     }
 }
