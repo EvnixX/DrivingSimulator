@@ -8,17 +8,21 @@ public class Pratullaje : MonoBehaviour
     public float objetiveChange = 0.1f;
 
     public Transform[] PuntosPatrullla;
+    public Semaforo semaforo;
 
     int puntoActual = 0;
 
     private void Update()
     {
-        if (MoviendoAlTarget())
+        if (semaforo.rojo == true || semaforo.amarilloRoja == true)
         {
-            puntoActual = ObtenerSiguienteObjetivo();
+            if (MoviendoAlTarget())
+            {
+                puntoActual = ObtenerSiguienteObjetivo();
+            }
+
         }
     }
-
     public bool MoviendoAlTarget() 
     {
         Vector3 distancia = PuntosPatrullla[puntoActual].position - transform.position;

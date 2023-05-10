@@ -7,7 +7,7 @@ public class Semaforo : MonoBehaviour
     public GameObject luz,trigger;
 
     public Transform posVer, posRoj, posAma;
-    private bool rojo, verde, amarilloRoja,amarilloVerda;
+    public bool rojo, verde, amarilloRoja,amarilloVerda;
     public float numVerde,numRojo,numAmarillo;
 
     // Start is called before the first frame update
