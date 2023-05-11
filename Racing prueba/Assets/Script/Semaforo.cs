@@ -26,7 +26,6 @@ public class Semaforo : MonoBehaviour
             luz.transform.position = posRoj.position;
             luz.GetComponent<Light>().color = Color.red;
             StartCoroutine(LuzRojo()); 
-            caminaJ.SetBool("Camina1", true);
             amarilloVerda = false; 
            
             trigger.SetActive(true);
@@ -38,7 +37,6 @@ public class Semaforo : MonoBehaviour
             luz.transform.position = posVer.position;
             luz.GetComponent<Light>().color = Color.green;
             StartCoroutine(LuzVerde());
-            caminaJ.SetBool("Camina1", false);
             amarilloRoja = false;
         }
 
@@ -47,7 +45,6 @@ public class Semaforo : MonoBehaviour
             luz.transform.position = posAma.position;
             luz.GetComponent<Light>().color = Color.yellow;
             StartCoroutine(LuzAmarilloRojo());
-            caminaJ.SetBool("Camina1", false);
             rojo = false;
             trigger.SetActive(false);
         }

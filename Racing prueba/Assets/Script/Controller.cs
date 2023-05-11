@@ -23,9 +23,14 @@ public class Controller : MonoBehaviour
     public int velocityMax = 2000;
 
 
-   
+    public AudioSource audioSource;
+
+
+
     public Camera tercera_Persona;
     public Camera Primera_Persona;
+
+
 
 
 
@@ -71,6 +76,7 @@ public class Controller : MonoBehaviour
         {
             Rueda1.motorTorque = Velocity * Input.GetAxis("Vertical");
             Rueda2.motorTorque = Velocity * Input.GetAxis("Vertical");
+
             animator_llanta1.SetBool("Run", true);
             animator_llanta2.SetBool("Run", true);
             animator_llanta3.SetBool("Run", true);
@@ -81,8 +87,9 @@ public class Controller : MonoBehaviour
         {
             Rueda1.motorTorque = 0;
             Rueda2.motorTorque = 0;
+
         }
-      
+
         Rueda3.steerAngle = -40 * Input.GetAxis("Horizontal");
         Rueda4.steerAngle = -40 * Input.GetAxis("Horizontal");
 
@@ -90,6 +97,7 @@ public class Controller : MonoBehaviour
         {
             Rueda1.brakeTorque = Frenar;
             Rueda2.brakeTorque = Frenar;
+            audioSource.volume -= 0.0090f;
             animator_llanta1.SetBool("Run", false);
             animator_llanta2.SetBool("Run", false);
             animator_llanta3.SetBool("Run", false);
@@ -101,23 +109,12 @@ public class Controller : MonoBehaviour
             Rueda2.brakeTorque = 0;
         }
 
+        if(velocityAct > 0)
+        {
+            audioSource.volume += 0.0010f;
+        }
 
 
-       
-
-       
-
-
-
-
-
-
-
-    }
-   
- 
-    
-    
-        
+    }     
     
 }
