@@ -15,12 +15,7 @@ public class Collisions : MonoBehaviour
         if (other.gameObject.tag == "Autos")
         {
             eventsCanvas.Pausegame();
-            eventsCanvas.estadodialogos++;
-        }
-
-        if (other.gameObject.tag == "llanta1" + "llanta2")
-        {
-
+            eventsCanvas.estadodialogos = 1;
         }
     }
 }

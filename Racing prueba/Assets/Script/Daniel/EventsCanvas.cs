@@ -4,20 +4,12 @@ using UnityEngine;
 using TMPro;
 public class EventsCanvas : MonoBehaviour
 {
-    //public GameObject carros;
     public TextMeshProUGUI textMesh;
-    public string strings;
-    //[TextArea]
-    //public GameObject carro;
+    string strings;
     public GameObject pause_Button;
     public GameObject pause_Menu;
     public bool juegoPausado;
-    public int estadodialogos = 1;
-
-    private void Start()
-    {
-
-    }
+    public int estadodialogos;
     private void Update()
     {
         if (Input.GetKeyDown("p"))
@@ -32,13 +24,21 @@ public class EventsCanvas : MonoBehaviour
             }
         }
         Textos();
+
+        if (estadodialogos > 1)
+        {
+            estadodialogos = 0;
+        }
     }
     public void Textos ()
     {
         switch (estadodialogos)
         {
+            case 0:
+                textMesh.text = null;
+                break;
             case 1:
-                textMesh.text = "Holaaaaa";
+                textMesh.text = "No debes acelerar ni pasarte los semáforos cuando estén en rojo.";
                 break;
             case 2:
                 textMesh.text = "Adiooossss  ;D";
@@ -61,14 +61,5 @@ public class EventsCanvas : MonoBehaviour
         pause_Button.SetActive(false);
         pause_Menu.SetActive(false);
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Autos")
-        {
-            Pausegame();
-            estadodialogos++;
-        }
-    }*/
 }
 
