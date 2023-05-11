@@ -1015,8 +1015,9 @@ GameObject:
   - component: {fileID: 611194679}
   - component: {fileID: 611194678}
   - component: {fileID: 611194677}
+  - component: {fileID: 611194680}
   m_Layer: 5
-  m_Name: Play Tuto (1)
+  m_Name: Propuesta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1086,7 +1087,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611194678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 611194675}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &611194678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1138,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611194675}
   m_CullTransparentMesh: 1
+--- !u!114 &611194680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611194675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb48a7f9ab9b6b4ebc7b69ea7325f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &644258716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,8 +1479,9 @@ GameObject:
   - component: {fileID: 930461707}
   - component: {fileID: 930461706}
   - component: {fileID: 930461705}
+  - component: {fileID: 930461708}
   m_Layer: 5
-  m_Name: Play Tuto (2)
+  m_Name: Salir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1525,7 +1551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 930461706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 930461708}
+        m_TargetAssemblyTypeName: Mainmenu, Assembly-CSharp
+        m_MethodName: Salir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &930461706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,6 +1602,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930461703}
   m_CullTransparentMesh: 1
+--- !u!114 &930461708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930461703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb48a7f9ab9b6b4ebc7b69ea7325f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966953786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutorial
+  m_text: Jugar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd00fbdab0a33ed4e8592b0e5133397d, type: 2}
   m_sharedMaterial: {fileID: 1337691035668414308, guid: dd00fbdab0a33ed4e8592b0e5133397d, type: 2}
@@ -1926,6 +1976,7 @@ GameObject:
   - component: {fileID: 1350913485}
   - component: {fileID: 1350913484}
   - component: {fileID: 1350913483}
+  - component: {fileID: 1350913486}
   m_Layer: 5
   m_Name: Play Tuto
   m_TagString: Untagged
@@ -1997,7 +2048,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1350913484}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350913486}
+        m_TargetAssemblyTypeName: Mainmenu, Assembly-CSharp
+        m_MethodName: Tutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1350913484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,6 +2099,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350913481}
   m_CullTransparentMesh: 1
+--- !u!114 &1350913486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350913481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb48a7f9ab9b6b4ebc7b69ea7325f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1377649637
 GameObject:
   m_ObjectHideFlags: 0
