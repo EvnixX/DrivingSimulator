@@ -12,17 +12,6 @@ public class EventsCanvas : MonoBehaviour
     public int estadodialogos;
     private void Update()
     {
-        if (Input.GetKeyDown("p"))
-        {
-            if (juegoPausado)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                Pausegame();
-            }
-        }
         Textos();
 
         if (estadodialogos > 2)

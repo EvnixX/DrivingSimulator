@@ -1605,8 +1605,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2814068911102468208}
-  m_LocalRotation: {x: 0.1527806, y: 2.0854163e-17, z: 4.9348272e-17, w: 0.98826015}
-  m_LocalPosition: {x: 0, y: 5.43171, z: -14.500495}
+  m_LocalRotation: {x: 0.1527806, y: -4.1708326e-17, z: -9.8696544e-17, w: 0.98826015}
+  m_LocalPosition: {x: 0, y: 7.181428, z: -20.024284}
   m_LocalScale: {x: 0.79671, y: 0.79671, z: 0.79671}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2435,7 +2435,7 @@ Transform:
   m_GameObject: {fileID: 4934637950033127234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 150.1, y: 1.93, z: 130.98}
-  m_LocalScale: {x: 0.4825054, y: 0.4825054, z: 0.4825054}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3119136896729236058}
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   animator_llanta3: {fileID: 0}
   animator_llanta4: {fileID: 0}
   velocityAct: 0
-  velocityMax: 2000
+  velocityMax: 1500
   tercera_Persona: {fileID: 0}
   Primera_Persona: {fileID: 3382846750798560953}
 --- !u!114 &5706214378191371772
