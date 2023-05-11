@@ -928,7 +928,6 @@ MonoBehaviour:
   audioSource: {fileID: 4673227474897089934}
   tercera_Persona: {fileID: 0}
   Primera_Persona: {fileID: 2066403276}
-  frenar: 0
 --- !u!114 &1001505799432816201
 MonoBehaviour:
   m_ObjectHideFlags: 0

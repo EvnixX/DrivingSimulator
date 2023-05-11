@@ -20,6 +20,11 @@ public class Mainmenu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
     public void Salir()
     {
         Application.Quit();
