@@ -8,17 +8,34 @@ public class Pratullaje : MonoBehaviour
     public float objetiveChange = 0.1f;
 
     public Transform[] PuntosPatrullla;
+    public Semaforo semaforo;
 
     int puntoActual = 0;
 
+    public bool entroZona = false;
+
+    private void Start()
+    {
+        entroZona = false;
+    }
+
     private void Update()
     {
-        if (MoviendoAlTarget())
+        
+            if (semaforo.rojo == true)
+            {
+                if (MoviendoAlTarget())
+                {
+                    puntoActual = ObtenerSiguienteObjetivo();
+                }
+            }
+        if (entroZona == true && !semaforo.rojo)
         {
             puntoActual = ObtenerSiguienteObjetivo();
         }
+      
+        
     }
-
     public bool MoviendoAlTarget() 
     {
         Vector3 distancia = PuntosPatrullla[puntoActual].position - transform.position;
@@ -44,5 +61,21 @@ public class Pratullaje : MonoBehaviour
         }
 
         return puntoActual;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("peaton"))
+        {
+           entroZona = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("peaton"))
+        {
+            entroZona = false;
+            Debug.Log("asfaf");
+        }
     }
 }
