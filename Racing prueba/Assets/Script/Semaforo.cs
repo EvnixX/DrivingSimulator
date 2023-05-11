@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Semaforo : MonoBehaviour
 {
-    public GameObject luz,trigger;
-
+    public GameObject luz, trigger;
+    public Animator caminaJ, camina—, caminaV;
     public Transform posVer, posRoj, posAma;
     public bool rojo, verde, amarilloRoja,amarilloVerda;
     public float numVerde,numRojo,numAmarillo;
@@ -14,6 +14,9 @@ public class Semaforo : MonoBehaviour
     void Start()
     {
         trigger.SetActive(false);
+        caminaJ = GetComponent<Animator>();
+        caminaV = GetComponent<Animator>();
+        camina— = GetComponent<Animator>();
         verde = true;
     }
 
@@ -25,8 +28,12 @@ public class Semaforo : MonoBehaviour
             luz.transform.position = posRoj.position;
             luz.GetComponent<Light>().color = Color.red;
             StartCoroutine(LuzRojo());
-            amarilloVerda = false;
+            amarilloVerda = false; 
+            caminaJ.SetBool("Camina1", true);
+            caminaV.SetBool("Camina2", true);
+            camina—.SetBool("Camina3", true);
             trigger.SetActive(true);
+            
         }
 
         if (verde == true)
