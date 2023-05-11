@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class EventsCanvas : MonoBehaviour
 {
     public TextMeshProUGUI textMesh;
     string strings;
-    public GameObject pause_Button;
-    public GameObject pause_Menu;
+    public GameObject pause_Button, pause_Menu, kilometraje;
     public bool juegoPausado;
     public int estadodialogos;
     private void Update()
@@ -25,7 +25,7 @@ public class EventsCanvas : MonoBehaviour
         }
         Textos();
 
-        if (estadodialogos > 1)
+        if (estadodialogos > 2)
         {
             estadodialogos = 0;
         }
@@ -41,7 +41,7 @@ public class EventsCanvas : MonoBehaviour
                 textMesh.text = "No debes acelerar ni pasarte los semáforos cuando estén en rojo.";
                 break;
             case 2:
-                textMesh.text = "Adiooossss  ;D";
+                textMesh.text = "Superaste la prueba";
                 break;
 
         }
@@ -52,6 +52,7 @@ public class EventsCanvas : MonoBehaviour
         Time.timeScale = 0f;
         pause_Button.SetActive(true);
         pause_Menu.SetActive(true);
+        kilometraje.SetActive(false);
     }
 
     public void ResumeGame()
@@ -60,6 +61,13 @@ public class EventsCanvas : MonoBehaviour
         Time.timeScale = 1f;
         pause_Button.SetActive(false);
         pause_Menu.SetActive(false);
+        kilometraje.SetActive(true);
     }
+    public void Restart_Game()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
 
