@@ -22,9 +22,10 @@ public class Collisions : MonoBehaviour
 
         if (this.gameObject.tag == "Final")
         {
-            eventsCanvas.Pausegame();
+            eventsCanvas.Creditos();
             eventsCanvas.estadodialogos = 2;
         }
         
     }
+    
 }

@@ -7,7 +7,7 @@ public class EventsCanvas : MonoBehaviour
 {
     public TextMeshProUGUI textMesh;
     string strings;
-    public GameObject pause_Button, pause_Menu, kilometraje;
+    public GameObject pause_Button, pause_Menu, kilometraje, creditsButton;
     public bool juegoPausado;
     public int estadodialogos;
     private void Update()
@@ -56,6 +56,19 @@ public class EventsCanvas : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void Creditos()
+    {
+        juegoPausado = true;
+        Time.timeScale = 0f;
+        pause_Button.SetActive(false);
+        creditsButton.SetActive(true);
+        pause_Menu.SetActive(true);
+        kilometraje.SetActive(false);
+    }
+    public void CreditosScene() 
+    {
+        SceneManager.LoadScene("Creditos");
     }
 
 }
