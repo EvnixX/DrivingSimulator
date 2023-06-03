@@ -4,9 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Folder
   - Autos
   - peaton
   - Final
+  - SAmarilla
+  - SAzul
+  - SRoja
+  - Tutorial
   layers:
   - Default
   - TransparentFX

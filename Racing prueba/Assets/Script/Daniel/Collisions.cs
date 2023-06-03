@@ -16,16 +16,27 @@ public class Collisions : MonoBehaviour
     {
         if (other.gameObject.tag == "Autos" && semaforo.rojo == true)
         {
+            eventsCanvas.imgGeneral.SetActive(true);
+            eventsCanvas.advObj.SetActive(true);
             eventsCanvas.Pausegame();
-            eventsCanvas.estadodialogos = 1;
+            eventsCanvas.dialogosAdvertencias = 1;
         }
 
         if (this.gameObject.tag == "Final")
         {
+            eventsCanvas.imgGeneral.SetActive(true);
+            eventsCanvas.advObj.SetActive(true);
             eventsCanvas.Creditos();
-            eventsCanvas.estadodialogos = 2;
+            eventsCanvas.dialogosAdvertencias = 2;
         }
-        
+        if (this.gameObject.tag == "Tutorial")
+        {
+            eventsCanvas.imgGeneral.SetActive(true);
+            eventsCanvas.advObj.SetActive(true);
+            eventsCanvas.Pausegame();
+            eventsCanvas.dialogosAdvertencias = 3;
+        }
+
     }
     
 }
