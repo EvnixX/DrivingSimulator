@@ -574,7 +574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588431035820850914}
   m_LocalRotation: {x: 0.098537624, y: -0.000000016223131, z: 0.0000000016064068, w: 0.99513334}
-  m_LocalPosition: {x: 0, y: 3.2936842, z: -9.641413}
+  m_LocalPosition: {x: 0, y: 3.71, z: -11.722992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -769,7 +769,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &8656855860119083096
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -786,7 +786,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2245208994119700022
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +908,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &8191951129228100550
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -925,7 +925,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4566227980681008490
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +968,7 @@ GameObject:
   - component: {fileID: 5228244381933995584}
   - component: {fileID: 1588431035141383172}
   - component: {fileID: 1588431035141383171}
+  - component: {fileID: 4488068259360339013}
   - component: {fileID: 5228244381933995599}
   - component: {fileID: 5228244381933995598}
   - component: {fileID: 4577943325941134054}
@@ -1030,7 +1031,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.887425, y: 1.3463621, z: 4.512597}
   m_Center: {x: 0.0009206705, y: 0.74323606, z: 0.16312264}
---- !u!114 &5228244381933995599
+--- !u!114 &4488068259360339013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1038,6 +1039,25 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4883489949542505722}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7001ebadcce35144eb32058e2bc65e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaMotor: 1000
+  fuerzaFreno: 2000
+  anguloMaxLlantas: 30
+  llantasdelanteras: []
+  llantasTraseras: []
+  terceraPersonaCam: {fileID: 0}
+  primeraPersonaCam: {fileID: 0}
+--- !u!114 &5228244381933995599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883489949542505722}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79cf280fbf0c8ad4a86b7d2a024d83dd, type: 3}
   m_Name: 
@@ -1059,7 +1079,6 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   tercera_Persona: {fileID: 0}
   Primera_Persona: {fileID: 1588431035161249169}
-  frenar: 0
 --- !u!114 &5228244381933995598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1359,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &7859805296602417407
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1357,7 +1376,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7337151122554693199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1463,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &7140713459135361785
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1461,7 +1480,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &8852898141559140934
 GameObject:
   m_ObjectHideFlags: 0
