@@ -16,7 +16,7 @@ public class Patrullaje : MonoBehaviour
 
     private void Update()
     {
-        if (semaforo.rojo || semaforo.amarilloRoja)
+        if (semaforo.rojo)
         {
             if (enPatrullaje && !esperando)
             {

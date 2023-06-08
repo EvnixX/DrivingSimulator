@@ -65,13 +65,13 @@ public class Controller : MonoBehaviour
 
         }
 
-
-
     }
 
     [Obsolete]
     private void FixedUpdate()
     {
+
+      
         if(velocityAct < velocityMax)
         {
             Rueda1.motorTorque = Velocity * Input.GetAxis("Vertical");
